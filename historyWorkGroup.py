@@ -5,3 +5,6 @@ st.set_page_config(
 )
 st.sidebar.success("Kongpop's history group")
 st.title("Kongpop's history group")
+st.markdown("### กดซ้ายบนเข้า tab")
+st.text(" ")
+st.text("coders : justwho's k, likecats")
