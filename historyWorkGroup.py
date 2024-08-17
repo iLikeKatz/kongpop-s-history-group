@@ -5,6 +5,7 @@ from krittapakwork import krittapak
 
 def page1():
     st.markdown("# งานกลุ่มประวัติ")
+    st.markdown("##(กดปุ่ม2ที)")
     st.text(" ")
     st.markdown("## justwho's k")
     if st.button("enter to see your links:)", key="jk"):
