@@ -3,7 +3,7 @@ import streamlit as st
 
 def kongpop():
     st.title("kongpop's questions")
-    st.markdown("### 1.ประเทศใดที่สยามประกาศสงคราม ในวันที่ 22 กค 2460")
+    st.markdown("### 1.ไทยมีบทบาทอย่างไรในสงครามโลกครั้งที่1")
 
     st.markdown("""
     ### link 1 : <a href="https://th.wikipedia.org/wiki/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87" target="_blank">wiki (thai in ww1)</a>
