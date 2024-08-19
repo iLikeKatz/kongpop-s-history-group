@@ -15,14 +15,26 @@ def save_data(data, filename):
 # Load the existing data
 data = load_data('link.json')
 name_list = load_data('name.json')
+check = load_data('TrueFalse.json')
 
 def fixname(index, variable, key):
     st.markdown(f"## {index+1}. {name_list[index]}")
-        
-def fixlink(index, variable, key):
-    cols = st.columns(2)
-    name = data[index]
 
+def fixlink(index, variable, key, show_full_links=check[0]):
+    if show_full_links == "True":
+        show_full_links = True
+    else :
+        show_full_links = False
+    cols = st.columns(2)
+        
+    if show_full_links:
+        name = data[index]
+    else :
+        if len(data[index]) < 15:
+            name = data[index][:3]
+        else:
+            name = data[index][9:15]
+    
     links = str(key[1:])
     with cols[0]:
         st.markdown(f"""
@@ -31,6 +43,17 @@ def fixlink(index, variable, key):
     st.text(" ")
 
 def conclusion():
+    if check[0] != "True":
+        if st.button("show full links"):
+            check[0] = 'True'
+            save_data(check, 'TrueFalse.json')
+            st.success('done')
+    else :
+        if st.button("hide some texts links"):
+            check[0] = 'False'
+            save_data(check, 'TrueFalse.json')
+            st.success('done')
+
     st.title("สรุปทั้ง 6 คำถาม")
     st.markdown("#### *ไปใส่ links ในช่องของตัวเอง เเล้วมันจะมาขึ้นในนี้ให้เอง*")
     text1 = None
